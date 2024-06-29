@@ -20,8 +20,8 @@ To run this project, follow these steps:
 ### Installation
 1. **Clone the repository to where you want the project to stay:**
    ```bash
-   git clone https://github.com/GhoulKingR/subscription-manager.git
-   cd subscription-manager
+   git clone https://github.com/GhoulKingR/subscription-tracker.git
+   cd subscription-tracker
    ```
 
 2. **Ensure `osascript` is available:**
@@ -35,7 +35,7 @@ To automate the subscription checks, you can add a `cron` job that runs the scri
   ```
 2. Add a cron job to run the script every hour:
   ```cron
-  0 * * * * /usr/bin/python3 /path/to/subscription-manager/main.py
+  0 * * * * /usr/bin/python3 /path/to/subscription-tracker/main.py
   ```
 
 ### Configuration
