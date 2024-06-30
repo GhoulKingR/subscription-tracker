@@ -9,7 +9,7 @@ This Python project provides a simple tool to easily manage your subscription. I
 - macOS (due to the usage of AppleScript for notifications)
 
 ## Updating
-There are two ways you can update your copy of the project.
+There are two ways to update your copy of the project.
 
 * **With git pull:**
 ```bash
