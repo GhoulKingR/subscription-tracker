@@ -12,13 +12,13 @@ This Python project provides a simple tool to easily manage your subscription. I
 There are two ways to update your copy of the project.
 
 * **With git pull:**
-```bash
-git pull
-```
+   ```bash
+   git pull
+   ```
 * **With the --update flag:** (may not be available on your version)
-```bash
-python3 cli.py --update
-```
+   ```bash
+   python3 cli.py --update
+   ```
 
 ## Features
 - **Add Subscriptions**: Allows users to add subscriptions with expiration dates.
@@ -36,7 +36,12 @@ To run this project, follow these steps:
    cd subscription-tracker
    ```
 
-2. **Ensure `osascript` is available:**
+2. **Install its dependencies**:
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+3. **Ensure `osascript` is available:**
    This project uses AppleScript for sending notifications, which should be available by default on all macOS systems.
 
 ### Scheduling with `cron`
