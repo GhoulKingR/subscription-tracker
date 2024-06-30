@@ -25,11 +25,24 @@ def check_for_updates():
     return local_version != latest_version
 
 def print_update_info():
-    _, changelog = get_latest_commit()
-    print("New version available 👨‍💻\n")
-    print("Change Log:")
-    for log in changelog:
-        print(f" - {log}")
+    local_version = get_local_version()
+    response = requests.get(GITHUB_REPO_API_URL)
+    response.raise_for_status()
+    commits = response.json()
+
+    changelog = []
+    for commit in commits:
+        if commit['sha'] == local_version:
+            break
+        changelog.append(commit['commit']['message'])
+
+    if changelog:
+        print("New version available 👨‍💻\n")
+        print("Change Log:")
+        for log in changelog:
+            print(f" - {log}")
+    else:
+        print("Up to date ✅")
 
 def update_application():
     subprocess.run(['git', 'pull'])
