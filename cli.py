@@ -45,7 +45,7 @@ def main():
     parser.add_argument('-v', '--version', action='store_true', help="Check the current version and updates")
     args = parser.parse_args()
 
-    if (not args.version or not args.update) and check_for_updates():
+    if not args.version and not args.update and check_for_updates():
         print("New version available 👨‍💻\n")
         print("Run `python3 cli.py --version` for more information")
 
