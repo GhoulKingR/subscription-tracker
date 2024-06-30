@@ -8,18 +8,6 @@ This Python project provides a simple tool to easily manage your subscription. I
 - Python 3.6 or higher
 - macOS (due to the usage of AppleScript for notifications)
 
-## Updating
-There are two ways to update your copy of the project.
-
-* **With git pull:**
-   ```bash
-   git pull
-   ```
-* **With the --update flag:** (may not be available on your version)
-   ```bash
-   python3 cli.py --update
-   ```
-
 ## Features
 - **Add Subscriptions**: Allows users to add subscriptions with expiration dates.
 - **Delete Subscriptions**: Allows users to delete an existing subscription.
@@ -57,6 +45,18 @@ To automate the subscription checks, you can add a `cron` job that runs the scri
 
 ### Configuration
 No additional configuration is required.
+
+## Updating
+There are two ways to update your copy of the project.
+
+* **With git pull:**
+   ```bash
+   git pull
+   ```
+* **With the --update flag:** (may not be available on your version)
+   ```bash
+   python3 cli.py --update
+   ```
 
 ## Usage
 You can interact with the subscription tracker using the command-line interface provided by `cli.py`.
