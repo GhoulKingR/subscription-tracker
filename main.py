@@ -30,6 +30,10 @@ def check_subscriptions():
             send_notification("Subscription Alert", f"{sub} is expiring in less than 2 hours!")
         elif time_diff.days == 1:
             send_notification("Subscription Alert", f"{sub} is expiring tomorrow!")
+        elif time_diff.days < 0:
+            new_exp_date = exp_date.replace(month=exp_date.month+1).strftime('%Y-%m-%d %H:%M')
+            subscriptions[sub] = {'expires': new_exp_date}
+            save_subscriptions(subscriptions)
 
 def add_subscription(name, expires):
     subscriptions = load_subscriptions()
